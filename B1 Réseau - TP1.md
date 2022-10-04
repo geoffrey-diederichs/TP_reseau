@@ -262,7 +262,6 @@ knjki
     
 DHCP4.OPTION[1]:                        dhcp_lease_time = 86336
 DHCP4.OPTION[2]:                        dhcp_server_identifier = 10.33.19.254
-DHCP4.OPTION[4]:                        expiry = 1664967143
 ```
 
 ## 2. DNS
@@ -374,7 +373,7 @@ Ynov possède plusieurs addresses IP auxquelles il nous renvoie pour répartir l
 
 # IV. Wireshark
 ## 1. Intro Wireshark
-🌞 Utilisez le pour observer les trames qui circulent entre vos deux carte Ethernet. Mettez en évidence : 
+🌞 Utilisez le pour observer les trames qui circulent entre vos deux carte Ethernet.
 
 - Ping :
 ![](https://i.imgur.com/LU6gMCg.png)
@@ -386,6 +385,7 @@ Ynov possède plusieurs addresses IP auxquelles il nous renvoie pour répartir l
 ## 2. Bonus : avant-goût TCP et UDP
 
 🌞 **Wireshark it**
+
 ![](https://i.imgur.com/XjudzTQ.png)
 - IP du serveur youtube : 
 91.68.245.17
