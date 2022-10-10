@@ -215,7 +215,7 @@ rtt min/avg/max/mdev = 50.900/57.393/62.259/4.777 ms
 
 [Trames DHCP](./Trames/dhcp.pcapng)
 - IP à utiliser : 
-    Destinataire : 10.33.16.230
+    trame 2, destinataire : 10.33.16.230
 - Adresse IP de la passerelle réseau : 
     trame 2, option 3, routeur (10.33.19.254)
 - Adresse d'un serveur DNS : 
