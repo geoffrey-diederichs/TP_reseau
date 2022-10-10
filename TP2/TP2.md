@@ -74,7 +74,7 @@ $ ip n s
 ```
 🌞 **Wireshark it**
 
-[Trames ARP](./arp.pcapng)
+[Trames ARP](./Trames/arp.pcapng)
 
 # II.5 Interlude hackerzz
 ## 1 - ARP poisoning
@@ -119,7 +119,7 @@ $ ip n s
 192.168.56.102 dev enp0s8 lladdr 08:00:27:be:50:e2 STALE
 192.168.56.1 dev enp0s8 lladdr 0a:00:27:00:00:00 DELAY
 ```
-[Pings](./arp_poisoning_1_ping.pcapng)
+[Pings](./Trames/arp_poisoning_1_ping.pcapng)
 ## 2 - Man in the middle
 - ARP poisoning (arp_poisoning.py) : 
 ``` python 
@@ -177,7 +177,7 @@ sudo python Desktop/arp_poisoning.py
 192.168.56.102 dev enp0s8 lladdr 08:00:27:be:50:e2 STALE
 192.168.56.104 dev enp0s8 lladdr 08:00:27:be:50:e2 STALE
 ```
-[Trames ARP poisoning](./arp_poisoning_py.pcapng)
+[Trames ARP poisoning](./Trames/arp_poisoning_py.pcapng)
 - Eve : 
 ```
 sudo python Desktop/mitm.py
@@ -195,7 +195,7 @@ PING 192.168.56.103 (192.168.56.103) 56(84) bytes of data.
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 45.616/62.655/74.280/12.312 ms
 ```
-[Pings d'Alice](./alice_pings.pcapng)
+[Pings d'Alice](./Trames/alice_pings.pcapng)
 ```
 [bob@localhost ~]$ ping 192.168.56.102 -c 3
 
@@ -208,12 +208,12 @@ PING 192.168.56.102 (192.168.56.102) 56(84) bytes of data.
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 50.900/57.393/62.259/4.777 ms
 ```
-[Pings de Bob](./bob_pings.pcapng)
+[Pings de Bob](./Trames/bob_pings.pcapng)
 # III. DHCP you too my brooo
 
 🌞 **Wireshark it**
 
-[Trames DHCP](./dhcp.pcapng)
+[Trames DHCP](./Trames/dhcp.pcapng)
 - IP à utiliser : 
     Destinataire : 10.33.16.230
 - Adresse IP de la passerelle réseau : 
