@@ -40,7 +40,7 @@ rtt min/avg/max/mdev = 1.105/1.542/2.471/0.542 ms
  - Ping : type 8, code 0
  - Pong : type 0, code 0
 
-[Paquets ICMP](./ping.pcapng)
+[Paquets ICMP](./Trames/ping.pcapng)
 # II. ARP my bro
 🌞 **Check the ARP table**
 ```
