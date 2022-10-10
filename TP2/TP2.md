@@ -177,7 +177,7 @@ sudo python Desktop/arp_poisoning.py
 192.168.56.102 dev enp0s8 lladdr 08:00:27:be:50:e2 STALE
 192.168.56.104 dev enp0s8 lladdr 08:00:27:be:50:e2 STALE
 ```
-[Trames ARP poisoning](./arp_poisoning.pcapng)
+[Trames ARP poisoning](./arp_poisoning_py.pcapng)
 - Eve : 
 ```
 sudo python Desktop/mitm.py
@@ -215,8 +215,8 @@ rtt min/avg/max/mdev = 50.900/57.393/62.259/4.777 ms
 
 [Trames DHCP](./dhcp.pcapng)
 - IP à utiliser : 
-    Destinataire : 10.33.16.203
+    Destinataire : 10.33.16.230
 - Adresse IP de la passerelle réseau : 
-    Option 3 : routeur (10.33.19.254)
+    trame 2, option 3, routeur (10.33.19.254)
 - Adresse d'un serveur DNS : 
-    Option 6 : DNS (8.8.8.8 ; 8.8.4.4 ; 1.1.1.1)
+    trame 2, option 6, DNS (8.8.8.8 ; 8.8.4.4 ; 1.1.1.1)
