@@ -8,7 +8,7 @@ $ sudo ip addr add 10.10.10.2/22 dev enp3s0
 $ ip a
 
 2: enp3s0:
-    link/ether c0:18:50:0e:cb:bb brd ff:ff:ff:ff:ff:ff
+    link/ether c0:18:50:0e:cb:bb
     inet 10.10.10.2/22
 ```
 ```
@@ -83,7 +83,7 @@ $ ip n s
 $ ip a
 
 3: eth1:
-    link/ether 08:00:27:be:50:e2 brd ff:ff:ff:ff:ff:ff
+    link/ether 08:00:27:be:50:e2
     inet 192.168.56.104/24
 ```
 - Alice :
