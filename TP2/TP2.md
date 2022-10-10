@@ -1,4 +1,5 @@
 # TP2 : Ethernet, IP, et ARP
+Geoffrey Diederichs B1 B
 # I. Setup IP
 🌞 **Mettez en place une configuration réseau fonctionnelle entre les deux machines**
 ```
