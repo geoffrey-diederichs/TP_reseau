@@ -159,7 +159,7 @@ sniff(iface="eth0", filter = "icmp and host 192.168.56.103 and host 192.168.56.1
 ```
 - Eve : 
 ```
-sudo python Desktop/arp_poisoning.py
+$ sudo python Desktop/arp_poisoning.py
 ```
 - Alice et Bob : 
 ```
@@ -180,7 +180,7 @@ sudo python Desktop/arp_poisoning.py
 [Trames ARP poisoning](./Trames/arp_poisoning_py.pcapng)
 - Eve : 
 ```
-sudo python Desktop/mitm.py
+$ sudo python Desktop/mitm.py
 ```
 - Alice et Bob : 
 ```
