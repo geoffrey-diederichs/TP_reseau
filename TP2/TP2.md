@@ -219,4 +219,4 @@ rtt min/avg/max/mdev = 50.900/57.393/62.259/4.777 ms
 - Adresse IP de la passerelle réseau : 
     trame 2, option 3, routeur (10.33.19.254)
 - Adresse d'un serveur DNS : 
-    trame 2, option 6, DNS (8.8.8.8 ; 8.8.4.4 ; 1.1.1.1)
+    trame 2, option 6, Domaine Name Server (8.8.8.8 ; 8.8.4.4 ; 1.1.1.1)
