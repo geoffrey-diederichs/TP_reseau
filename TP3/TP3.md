@@ -355,5 +355,15 @@ rtt min/avg/max/mdev = 16.162/16.162/16.162/0.000 ms
 ```
 ### 2. Analyse de trames
 🌞**Analyse de trames**
+- Bob :
+```
+$ sudo dhclient -r
+$ sudo dhclient
+$ $ ip a
 
+2: enp0s8: 
+	link/ether 08:00:27:38:1c:9e
+    inet 192.168.57.3/24
+    inet 192.168.57.173/24
+```
 [Trames DHCP](./Trames/tp2_dhcp.pcapng)
