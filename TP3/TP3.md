@@ -211,7 +211,7 @@ rtt min/avg/max/mdev = 19.609/19.609/19.609/0.000 ms
 | 1     | ping       | `John` `192.168.57.2` | `John` `08:00:27:3c:a5:2d` | `8.8.8.8`      | `Routeur` `08:00:27:f5:f8:e6`|
 | 2     | pong       | `8.8.8.8`               |      `Routeur` `08:00:27:f5:f8:e6`                |      `John` `192.168.57.2`      | `John` `08:00:27:3c:a5:2d`             |
 
-[Pings](./Trames/tp3_routage_internet.pcap)
+[Ping](./Trames/tp3_routage_internet.pcap)
 
 ## III. DHCP
 ### 1. Mise en place du serveur DHCP
