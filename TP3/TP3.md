@@ -359,11 +359,11 @@ rtt min/avg/max/mdev = 16.162/16.162/16.162/0.000 ms
 ```
 $ sudo dhclient -r
 $ sudo dhclient
-$ $ ip a
+$ ip a
 
 2: enp0s8: 
 	link/ether 08:00:27:38:1c:9e
     inet 192.168.57.3/24
     inet 192.168.57.173/24
 ```
-[Trames DHCP](./Trames/tp3_dhcp.pcapng)
+[Trames DHCP](./Trames/tp3_dhcp.pcap)
