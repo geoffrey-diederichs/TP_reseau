@@ -240,6 +240,7 @@ subnet 192.168.57.0 netmask 255.255.255.0 {
 }
 
 $ sudo firewall-cmd --permanent --add-port=67/udp
+$ sudo firewall-cmd --add-interface==dhcpd
 $ sudo systemctl enable --now dhcpd
 $ sudo systemctl status dhcpd
 
