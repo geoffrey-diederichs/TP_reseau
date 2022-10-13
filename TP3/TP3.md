@@ -240,8 +240,13 @@ subnet 192.168.57.0 netmask 255.255.255.0 {
 }
 
 $ sudo firewall-cmd --permanent --add-port=67/udp
-$ sudo firewall-cmd --add-interface==dhcpd
-$ sudo systemctl enable --now dhcpd
+$ sudo firewall-cmd --add-service=dhcp
+$ sudo firewall-cmd --reload
+$ sudo systemctl enable dhcpd
+
+Created symlink /etc/systemd/system/multi-user.target.wants/dhcpd.service → /usr/lib/systemd/system/dhcpd.service
+
+$ sudo systemctl start dhcpd
 $ sudo systemctl status dhcpd
 
 ● dhcpd.service - DHCPv4 Server Daemon
