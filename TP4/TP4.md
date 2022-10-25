@@ -17,7 +17,7 @@ Geoffrey Diederichs B1 B
 🌞 **Déterminez, pour ces 5 applications, si c'est du TCP ou de l'UDP**
 🌞 **Demandez l'avis à votre OS**
 
-[Streaming netflix](./Trames/tp4_netflix.pcapng)
+[Streaming netflix](./Trames/netflix.pcapng)
 - IP destinataire : 92.90.254.205
 - Port destinataire : 443
 - Port source : 50124
@@ -27,7 +27,7 @@ $ ss -tup
 Netid            State            Recv-Q            Send-Q                             Local Address:Port                           Peer Address:Port              Process                                         
 tcp              ESTAB            0                 0                                   10.33.16.194:50124                         92.90.254.205:https              users:(("firefox",pid=7385,fd=114))  
 ```
-[Discord](./Trames/tp4_discord.pcapng)
+[Discord](./Trames/discord.pcapng)
 - IP destinataire : 162.159.129.233 ; 162.159.134.234
 - Port destinataire : 443 ; 443
 - Port source : 44128 ; 60542
@@ -38,7 +38,7 @@ Netid            State            Recv-Q            Send-Q                      
 tcp              ESTAB            0                 0                                   10.33.16.194:44128                        162.159.135.232:https              users:(("Discord",pid=8579,fd=27))            
 tcp              ESTAB            0                 0                                   10.33.16.194:60542                        162.159.134.234:https              users:(("Discord",pid=8579,fd=29)) 
 ```
-[Mise à jour système Linux](./Trames/tp4_linux_update.pcapng)
+[Mise à jour système Linux](./Trames/inux_update.pcapng)
 - IP destinataire : 134.109.228.1
 - Port destinataire : 80
 - Port source : 33128
@@ -48,7 +48,7 @@ $ ss -tup
 Netid               State               Recv-Q               Send-Q                                    Local Address:Port                                  Peer Address:Port                 Process               
 tcp                 ESTAB               0                    0                                          10.33.16.194:33128                                134.109.228.1:http                                     
 ```
-[Microsoft Teams](./Trames/tp4_teams.pcapng)
+[Microsoft Teams](./Trames/teams.pcapng)
 - IP destinataire : 20.42.72.131 ; 20.190.159.72
 - Port destinataire : 443 ; 443
 - Port source : 57914 ; 40704
@@ -59,7 +59,7 @@ Netid            State            Recv-Q            Send-Q                      
 tcp              ESTAB            0                 0                                   10.33.16.194:40704                           20.190.159.72:https              users:(("teams",pid=11572,fd=33))   
 tcp              ESTAB            0                 0                                   10.33.16.194:57914                            20.42.72.131:https              users:(("teams",pid=11572,fd=28))   
 ```
-[Lichess](./Trames/tp4_lichess.pcapng)
+[Lichess](./Trames/lichess.pcapng)
 - IP destinataire : 54.38.164.114 ; 37.187.205.99
 - Port destinataire : 443 ; 443
 - Port source : 48342 ; 57628
@@ -76,7 +76,7 @@ tcp              ESTAB            0                 0                           
 
 🌞 **Examinez le trafic dans Wireshark**
 
-[ssh](./Trames/tp4_ssh.pcapng)
+[ssh](./Trames/ssh.pcapng)
 
 🌞 **Demandez aux OS**
 
@@ -408,4 +408,4 @@ google.com.		86400	IN	A	142.250.179.78
 ;; MSG SIZE  rcvd: 83
 ```
 
-[DNS](./Trames/tp4_ssh.pcapng)
+[DNS](./Trames/ssh.pcapng)
