@@ -92,7 +92,7 @@ tcp   ESTAB      0      0             192.168.57.1:55970     192.168.57.2:ssh   
 Depuis node1.tp4.b1 : 
 
 ```
-$ ss -tup
+[rocky@node1 ~]$ ss -tup
 
 Netid                State                Recv-Q                Send-Q                                 Local Address:Port                                 Peer Address:Port                 Process                
 tcp                  ESTAB                0                     0                                       192.168.57.2:ssh                                  192.168.57.1:55970
@@ -101,7 +101,7 @@ tcp                  ESTAB                0                     0               
 ## 2. Setup
 
 ```
-$ sudo cat /etc/named.conf
+[rocky@dns-server ~]$ sudo cat /etc/named.conf
 
 //
 // named.conf
@@ -174,7 +174,7 @@ include "/etc/named.rfc1912.zones";
 include "/etc/named.root.key";
 ```
 ```
-$ sudo cat /var/named/tp4.b1.db
+[rocky@dns-server ~]$ sudo cat /var/named/tp4.b1.db
 
 $TTL 86400
 @ IN SOA dns-server.tp4.b1. admin.tp4.b1. (
@@ -193,7 +193,7 @@ dns-server IN A 192.168.57.4
 node1      IN A 192.168.57.2
 ```
 ```
-$ sudo cat /var/named/tp4.b1.db
+[rocky@dns-server ~]$ sudo cat /var/named/tp4.b1.db
 
 $TTL 86400
 @ IN SOA dns-server.tp4.b1. admin.tp4.b1. (
@@ -228,7 +228,7 @@ $TTL 86400
 2 IN PTR node1.tp4.b1.
 ```
 ```
-$ systemctl status named
+[rocky@dns-server ~]$ systemctl status named
 
 ● named.service - Berkeley Internet Name Domain (DNS)
      Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; vendor preset: disabled)
@@ -253,7 +253,7 @@ Oct 25 13:56:02 dns-server.tp4.b1 named[1048]: running
 ```
 🌞 **Ouvrez le bon port dans le firewall**
 ```
-$ sudo ss -ap '( sport = :53 )'
+[rocky@dns-server ~]$ sudo ss -ap '( sport = :53 )'
 
 Netid             State              Recv-Q             Send-Q                          Local Address:Port                             Peer Address:Port             Process                                       
 udp               UNCONN             0                  0                                192.168.57.4:domain                                0.0.0.0:*                 users:(("named",pid=1048,fd=19))             
@@ -264,11 +264,11 @@ tcp               LISTEN             0                  10                      
 tcp               LISTEN             0                  10                                      [::1]:domain                                   [::]:*                 users:(("named",pid=1048,fd=23))                                          
 ```
 ```
-$ sudo firewall-cmd --add-port=53/udp
-$ sudo firewall-cmd --add-port=53/udp --permanent
-$ sudo firewall-cmd --add-port=53/fdp
-$ sudo firewall-cmd --add-port=53/fdp --permanent
-$ sudo firewall-cmd --list-all
+[rocky@dns-server ~]$ sudo firewall-cmd --add-port=53/udp
+[rocky@dns-server ~]$ sudo firewall-cmd --add-port=53/udp --permanent
+[rocky@dns-server ~]$ sudo firewall-cmd --add-port=53/fdp
+[rocky@dns-server ~]$ sudo firewall-cmd --add-port=53/fdp --permanent
+[rocky@dns-server ~]$ sudo firewall-cmd --list-all
 
 public (active)
   ports: 53/tcp 53/udp
@@ -335,7 +335,7 @@ zone "com" IN {
 	allow-query { any; };
 };
 
-$ sudo cat /var/named/com.db
+[rocky@dns-server ~]$ sudo cat /var/named/com.db
 
 $TTL 86400
 @ IN SOA dns-server.tp4.b1. admin.tp4.b1. (
@@ -408,4 +408,4 @@ google.com.		86400	IN	A	142.250.179.78
 ;; MSG SIZE  rcvd: 83
 ```
 
-[DNS](./Trames/ssh.pcapng)
+[DNS](./Trames/dns.pcapng)
