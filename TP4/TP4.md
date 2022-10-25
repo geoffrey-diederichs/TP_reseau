@@ -38,7 +38,7 @@ Netid            State            Recv-Q            Send-Q                      
 tcp              ESTAB            0                 0                                   10.33.16.194:44128                        162.159.135.232:https              users:(("Discord",pid=8579,fd=27))            
 tcp              ESTAB            0                 0                                   10.33.16.194:60542                        162.159.134.234:https              users:(("Discord",pid=8579,fd=29)) 
 ```
-[Mise à jour système Linux](./Trames/inux_update.pcapng)
+[Mise à jour système Linux](./Trames/linux_update.pcapng)
 - IP destinataire : 134.109.228.1
 - Port destinataire : 80
 - Port source : 33128
