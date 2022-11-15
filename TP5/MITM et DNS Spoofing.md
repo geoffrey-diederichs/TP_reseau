@@ -274,7 +274,7 @@ rtt min/avg/max/mdev = 76.670/76.670/76.670/0.000 ms
 ```
 [Trames pings](./Trames/pings.pcapng)
 ## 3. DNS Spoofing
-Fichier de configuration du DNS spoof : [dns_spoof.txt](./Program/Resources/dns_spoof.tx)
+Fichier de configuration du DNS spoof : [dns_spoof.txt](./Program/Resources/dns_spoof.txt)
 ```bash=
 Adresse_web;Adresse_IP;
 *
