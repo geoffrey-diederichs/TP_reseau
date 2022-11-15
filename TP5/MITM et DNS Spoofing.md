@@ -384,4 +384,4 @@ test2.com.		600	IN	A	8.9.0.1
 ;; WHEN: Mon Nov 14 17:27:43 CET 2022
 ;; MSG SIZE  rcvd: 52
 ```
-[Trames DNS](./Trames/dns.pcapng)
+[Trames DNS](./Trames/dns.pcap)
