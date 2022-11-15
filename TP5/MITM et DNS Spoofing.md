@@ -36,7 +36,7 @@ Eve (attaquant) :
     link/ether 08:00:27:bf:27:f4 brd ff:ff:ff:ff:ff:ff
     inet 192.168.58.3/24
 ```
-Activez l'IP forwarding (l'instruction dépend de l'os, ici l'exemple est effectué sur Kali) et lancez le programme en sudo depuis l'attaquant dans le dossier contenant ces [fichiers](./Program), puis suivez les instructions comme dans cet exemple : 
+Activez l'IP forwarding (l'instruction dépend de l'os, ici l'exemple est effectué sur Kali) et lancez le programme en sudo depuis l'attaquant dans le dossier contenant ces [fichiers](./Program), puis suivez les instructions, de manière similaire à cet exemple : 
 ```bash=
 ┌──(kali㉿Eve)-[~/Documents/Programs]
 └─$ sudo sysctl net.ipv4.ip_nonlocal_bind=1
@@ -89,7 +89,7 @@ Enter the number of the first machine you wish to attack :
 ```
 ## 2. ARP Poisoning et MITM
 ### A. ARP Spoof
-[arp_poisoning.py](./Programme/Resources/arp_poisoning.py)
+[arp_poisoning.py](./Program/Resources/arp_poisoning.py)
 ```python=
 from scapy.all import *
 import time
