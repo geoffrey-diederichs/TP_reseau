@@ -1,0 +1,1 @@
+Please enable IP forwarding on your computer, launch the program 'main.py' as sudo and complete the file 'Resources/dns_spoof.txt' if you want to DNS spoof.
